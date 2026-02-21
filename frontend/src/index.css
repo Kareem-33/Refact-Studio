@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3566b0;
+  --color-primary-hover: #2f5a9c;
+  --color-primary-active: #294f88;
+  --color-primary-soft: #5c84c4;
+  --color-primary-tint: #8fa8d9;
+  --color-primary-ultralight: #e8eefa;
+
+  --color-background: #0e0e0e;
+  --color-surface: #151515;
+  --color-elevated: #1c1c1c;
+  --color-border: #2a2a2a;
+  --color-soft-border: #333333;
+
+  --color-text-primary: #fafbfc;
+  --color-text-secondary: #d6d7da;
+  --color-text-muted: #a9abb1;
+  --color-text-disabled: #6f6f6f;
+
+  --color-accent: #f5c26b;
+  --color-accent-hover: #eab354;
+  --color-accent-soft: #fff1d6;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  /* @apply tracking-tight; */
+
+  scrollbar-width: thin;
+  -webkit-scrollbar-width: thin;
+  -moz-scrollbar-width: thin;
+  -ms-scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+.navbar-item {
+  @apply before:content-[""] before:absolute before:-bottom-2 before:left-[50%] before:translate-x-[-50%] before:w-[125%]
+          before:h-[3px] before:bg-primary before:scale-x-0 hover:before:scale-x-100 before:rounded-full
+          before:transition-transform before:origin-left relative hover:text-primary-tint cursor-pointer
+          before:duration-300 before:ease-in-out;
+}
