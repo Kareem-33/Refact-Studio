@@ -12,7 +12,7 @@ type Props = {
   link: string;
 };
 
-const ProjectCard = ({ ...props }: Props) => {
+const ProjectCard = (props: Props) => {
   return (
     <div
       className={`flex items-start justify-start ${props.featured ? "col-span-2" : "flex-col-reverse"}
@@ -20,7 +20,7 @@ const ProjectCard = ({ ...props }: Props) => {
     >
       <div className={`${props.featured ? "w-full" : "w-full px-[40px] object-cover mx-auto"} relative`}>
         <img src={props.img} alt={`${props.title} cover image`} className={`w-full h-full ${!props.featured && "rounded-t-lg"}`} />
-        <div className="absolute w-full h-1/4 bg-linear-180 from-transparent to-surface z-100 bottom-0 left-0"/>
+        <div className="absolute w-full h-1/4 bg-linear-180 from-transparent to-surface z-1 bottom-0 left-0"/>
       </div>
       <div className={`h-full w-full flex flex-col gap-[10px] p-[40px] ${!props.featured && "flex-1"}`}>
         <div className="flex items-center justify-start gap-[10px]">

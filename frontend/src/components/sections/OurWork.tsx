@@ -3,35 +3,38 @@ import SectionHeader from "../ui/SectionHeader";
 import ProjectCard from "../common/ProjectCard";
 import Button from "../ui/Button";
 import { ArrowRightIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 const OurWork = () => {
-
   const projects = [
     {
       img: "/images/projects/snail-store.png",
       title: "Designing Dashboards",
-      description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      description:
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       featured: true,
       tags: ["Dashboard", "Design", "Development"],
-      link: "#"
+      link: "#",
     },
     {
       img: "/images/projects/snail-store.png",
       title: "Designing Dashboards",
-      description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      description:
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       featured: false,
       tags: ["Dashboard", "Design", "Development"],
-      link: "#"
+      link: "#",
     },
     {
       img: "/images/projects/reayaa.png",
       title: "Designing Dashboards",
-      description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      description:
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       featured: false,
       tags: ["Dashboard", "Design", "Development"],
-      link: "#"
-    }
-  ]
+      link: "#",
+    },
+  ];
 
   return (
     <div className="p-[120px] flex flex-col items-start justify-center gap-[60px]">
@@ -41,11 +44,17 @@ const OurWork = () => {
         dir="left"
       />
       <div className="space-y-[35px]">
-        <div className="grid grid-cols-2 grid-rows-[auto_1fr] gap-[35px] min-h-[250px] max-h-fit w-full">
-          <ProjectCard {...projects[0]}/>
-          <ProjectCard {...projects[1]}/>
-          <ProjectCard {...projects[2]}/>
-        </div>
+        <motion.div
+          className="grid grid-cols-2 grid-rows-[auto_1fr] gap-[35px] min-h-[250px] max-h-fit w-full "
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+        >
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </motion.div>
         <Button variant="small-ghost" className="text-base!">
           Show All Work
           <ArrowRightIcon size={20} />

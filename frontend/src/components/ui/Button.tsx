@@ -4,10 +4,10 @@ type Props = {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "small-ghost";
   className?: string;
-  onclick?: () => void;
+  onClick?: () => void;
 };
 
-const Button = ({ children, variant = "primary", className, onclick }: Props) => {
+const Button = ({ children, variant = "primary", className, onClick=()=>{} }: Props) => {
 
   const baseStyle = "transition-all duration-300 font-semibold flex items-center justify-center tracking-wide! cursor-pointer";
   const variants = {
@@ -19,7 +19,7 @@ const Button = ({ children, variant = "primary", className, onclick }: Props) =>
   return (
     <button
       className={`${baseStyle} ${variants[variant]} ${className}`}
-      onClick={onclick}
+      onClick={onClick}
     >
       {children}
     </button>

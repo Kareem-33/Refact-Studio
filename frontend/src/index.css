@@ -49,3 +49,7 @@ body {
           before:transition-transform before:origin-left relative hover:text-primary-tint cursor-pointer
           before:duration-300 before:ease-in-out;
 }
+
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1) !important;
+}
