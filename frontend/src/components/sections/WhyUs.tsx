@@ -1,5 +1,5 @@
 import SectionHeader from "../ui/SectionHeader";
-import { Code2Icon, GoalIcon, Icon, LayersIcon, ZapIcon } from "lucide-react";
+import { Code2Icon, GoalIcon, LayersIcon, ZapIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
 const WhyUs = () => {
