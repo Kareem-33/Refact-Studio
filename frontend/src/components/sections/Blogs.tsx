@@ -1,4 +1,3 @@
-import React from "react";
 import SectionHeader from "../ui/SectionHeader";
 import BlogCard from "../common/BlogCard";
 import Button from "../ui/Button";

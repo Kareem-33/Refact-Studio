@@ -1,5 +1,4 @@
 import { ArrowRightIcon, StarIcon } from "lucide-react";
-import React from "react";
 import Pill from "../ui/Pill";
 import Button from "../ui/Button";
 

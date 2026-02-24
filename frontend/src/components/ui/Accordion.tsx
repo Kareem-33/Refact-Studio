@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "lucide-react";
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 type Props = {

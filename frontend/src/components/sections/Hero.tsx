@@ -1,4 +1,3 @@
-import React from "react";
 import Label from "../ui/Label";
 import Button from "../ui/Button";
 import { motion } from "framer-motion";

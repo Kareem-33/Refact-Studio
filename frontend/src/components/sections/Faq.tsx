@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SectionHeader from "../ui/SectionHeader";
 import Accordion from "../ui/Accordion";
 import Button from "../ui/Button";

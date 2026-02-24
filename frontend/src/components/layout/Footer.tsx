@@ -1,5 +1,4 @@
 import { MailIcon, PhoneIcon } from "lucide-react";
-import React from "react";
 import {
   FaFacebook,
   FaInstagram,

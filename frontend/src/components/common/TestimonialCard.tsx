@@ -1,4 +1,3 @@
-import React from 'react'
 import Pill from '../ui/Pill'
 import { FaQuoteLeft } from "react-icons/fa6";
 
