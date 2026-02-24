@@ -53,3 +53,25 @@ body {
 .swiper-wrapper {
   transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1) !important;
 }
+
+input::placeholder {
+  @apply text-text-disabled;
+}
+
+/* Default dot */
+.swiper .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background: var(--color-text-disabled) ;
+  opacity: 1 ;
+  /* transition: all 0.3s ease; */
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  margin: 0 3px !important;
+}
+
+/* Active dot */
+.swiper .swiper-pagination-bullet-active {
+  width: 18px;
+  border-radius: 999px;
+  background: var(--color-primary);
+}

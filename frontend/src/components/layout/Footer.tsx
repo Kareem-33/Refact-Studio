@@ -40,8 +40,8 @@ const Footer = () => {
   ];
 
   return (
-    <div className="flex flex-col h-fit w-full bg-surface">
-      <div className="flex items-start justify-between py-[60px] px-[120px]">
+    <div className="flex flex-col h-[410px] w-full bg-surface">
+      <div className="flex items-start justify-between py-[60px] px-[120px] h-full">
         {/* Logo */}
         <div className="flex flex-col items-start gap-[20px] w-[320px]">
           <img src="/images/logo.svg" alt="logo" className="h-[80px]" />

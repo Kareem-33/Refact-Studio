@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`flex justify-between items-center px-[120px] sticky top-0 z-50 ${scrolled ? "bg-surface h-[80px]! shadow-primary/5 shadow-xl" : "h-[150px]!"} transition-all duration-300`}
+      className={`flex justify-between items-center px-[120px] sticky top-0 z-50 ${scrolled ? "bg-surface h-[80px]! shadow-primary/5 shadow-xl border-b border-border" : "h-[150px]! border-b border-transparent"} transition-all duration-300`}
     >
       <Link
         to="/"
