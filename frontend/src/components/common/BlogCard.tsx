@@ -19,7 +19,7 @@ const BlogCard = (props: Props) => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full h-fit rounded-[10px] overflow-hidden bg-surface border border-border">
+    <div className="flex flex-col w-full h-full rounded-[10px] overflow-hidden bg-surface border border-border">
       <div className="w-full aspect-video ">
         <img
           src={props.img}
@@ -27,9 +27,9 @@ const BlogCard = (props: Props) => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="flex flex-col gap-[10px] p-[20px]">
+      <div className="flex flex-col gap-[10px] p-[20px] flex-1">
         <Pill>{props.category}</Pill>
-        <h3 className="font-semibold tracking-wide leading-[120%]">
+        <h3 className="font-semibold tracking-wide leading-[140%]">
           {props.title}
         </h3>
         <p

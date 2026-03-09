@@ -4,10 +4,14 @@ import Button from "../ui/Button";
 import { ChevronDownIcon, StarIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { servicesArr } from "../sections/Services";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mouseMoved, setMouseMoved] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +28,19 @@ const Navbar = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleMouseMove = () => {
+      setMouseMoved(true);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -44,13 +61,16 @@ const Navbar = () => {
           </li>
           <li
             className="relative"
-            onMouseEnter={() => setServicesMenuOpen(true)}
+            onMouseEnter={() => mouseMoved && setServicesMenuOpen(true)}
             onMouseLeave={() => setServicesMenuOpen(false)}
           >
-            <div className="flex items-center gap-1 hover:text-primary-tint transition-all duration-300 ease-in-out cursor-default">
+            <Link
+              to={"/services"}
+              className="cursor-pointer flex items-center gap-1 hover:text-primary-tint transition-all duration-300 ease-in-out cursor-default"
+            >
               Services
               <ChevronDownIcon size={18} />
-            </div>
+            </Link>
             <motion.div
               className="absolute z-50 bg-surface rounded-[10px] shadow-lg top-full left-0 mt-2 border border-border w-fit"
               initial={{ opacity: 0, y: -10 }}
@@ -59,7 +79,11 @@ const Navbar = () => {
                 y: servicesMenuOpen ? 0 : -10,
                 display: servicesMenuOpen ? "flex" : "none",
               }}
-              transition={{ duration: 0.2, ease: "easeInOut", delay: servicesMenuOpen ? 0 : 0.2 }}
+              transition={{
+                duration: 0.2,
+                ease: "easeInOut",
+                delay: servicesMenuOpen ? 0 : 0.2,
+              }}
             >
               <div className="bg-elevated p-[20px] flex flex-col gap-[10px] w-[200px] rounded-l-[10px]">
                 <div className="flex items-center gap-[10px]">
@@ -76,10 +100,7 @@ const Navbar = () => {
               </div>
               <ul className="rounded-r-[10px] flex flex-col gap-[15px] p-[15px]">
                 {servicesArr.map((service, index) => (
-                  <li
-                    key={index}
-                    className="w-[250px]"
-                  >
+                  <li key={index} className="w-[250px]">
                     <Link
                       to={`/services/${service.slug}`}
                       className="flex items-center gap-[10px] p-[10px] bg-elevated border border-border rounded-[5px] font-normal text-sm hover:bg-primary/15 transition-all duration-300"
@@ -87,9 +108,7 @@ const Navbar = () => {
                       <div className="w-[40px] h-[40px] flex items-center justify-center bg-surface border border-border rounded-[5px]">
                         <service.icon size={20} className="text-primary" />
                       </div>
-                      <span className="flex-1">
-                        {service.title}
-                      </span>
+                      <span className="flex-1">{service.title}</span>
                     </Link>
                   </li>
                 ))}
@@ -113,7 +132,12 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <Button className={`${scrolled && "h-[36px]"}`}>Start a Project</Button>
+      <Button
+        className={`${scrolled && "h-[36px]"}`}
+        onClick={() => navigate("/start-project")}
+      >
+        Start a Project
+      </Button>
     </header>
   );
 };

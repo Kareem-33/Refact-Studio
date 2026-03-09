@@ -5,9 +5,10 @@ type Props = {
   variant?: "primary" | "secondary" | "small-ghost";
   className?: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 };
 
-const Button = ({ children, variant = "primary", className, onClick=()=>{} }: Props) => {
+const Button = ({ children, variant = "primary", className, onClick=()=>{}, type="button" }: Props) => {
 
   const baseStyle = "transition-all duration-300 font-semibold flex items-center justify-center tracking-wide! cursor-pointer";
   const variants = {
@@ -19,7 +20,8 @@ const Button = ({ children, variant = "primary", className, onClick=()=>{} }: Pr
   return (
     <button
       className={`${baseStyle} ${variants[variant]} ${className}`}
-      onClick={onClick}
+      onClick={() => type === "button" && onClick()}
+      type={type}
     >
       {children}
     </button>

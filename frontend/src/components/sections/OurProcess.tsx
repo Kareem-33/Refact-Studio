@@ -49,7 +49,7 @@ const OurProcess = () => {
                 {index + 1}
               </div>
             </div>
-            <div className="flex-1 bg-elevated p-[20px] rounded-[10px]  flex flex-col items-start justify-center gap-[10px]">
+            <div className="flex-1 bg-elevated p-[20px] rounded-[10px] flex flex-col items-start justify-center gap-[10px]">
               <h3 className="font-semibold text-lg">{step.title}</h3>
               <p className="font-normal text-sm leading-[150%] tracking-wide text-text-muted">
                 {step.description}

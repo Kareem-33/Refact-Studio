@@ -2,7 +2,7 @@ import SectionHeader from "../ui/SectionHeader";
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
 
-const ContactBanner = () => {
+const ContactBanner = ({type="both"}: {type?: "both" | "project" | "contact"}) => {
   return (
     <motion.div
       className="p-[120px]"
@@ -23,8 +23,8 @@ const ContactBanner = () => {
             your requirements and get back to you with clear next steps.
           </p>
           <div className="flex items-center justify-start gap-[20px]">
-            <Button variant="primary">Start a Project</Button>
-            <Button variant="secondary">Contact Us</Button>
+            {(type === "both" || type === "project") && <Button variant="primary">Start a Project</Button>}
+            {(type === "both" || type === "contact") && <Button variant="secondary">Contact Us</Button>}
           </div>
         </div>
         <div className="w-1/3 aspect-square rounded-r-[20px] overflow-hidden border-l border-border">

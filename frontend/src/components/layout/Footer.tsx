@@ -1,44 +1,11 @@
 import { MailIcon, PhoneIcon } from "lucide-react";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTiktok,
-  FaWhatsapp,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { socials } from "../data/socialMedia";
 
 const Footer = () => {
-  const socials = [
-    {
-      icon: FaFacebook,
-      link: "https://www.facebook.com/",
-    },
-    {
-      icon: FaXTwitter,
-      link: "https://www.x.com/",
-    },
-    {
-      icon: FaInstagram,
-      link: "https://www.instagram.com/",
-    },
-    {
-      icon: FaTiktok,
-      link: "https://www.tiktok.com/",
-    },
-    {
-      icon: FaWhatsapp,
-      link: "https://www.whatsapp.com/",
-    },
-    {
-      icon: FaYoutube,
-      link: "https://www.youtube.com/",
-    },
-  ];
 
   return (
-    <div className="flex flex-col h-[410px] w-full bg-surface">
+    <div className="flex flex-col h-[410px] w-full bg-surface border-t border-border">
       <div className="flex items-start justify-between py-[60px] px-[120px] h-full">
         {/* Logo */}
         <div className="flex flex-col items-start gap-[20px] w-[320px]">
@@ -128,7 +95,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-[5px]">
             {socials.map((social, index) => (
               <a
                 key={index}

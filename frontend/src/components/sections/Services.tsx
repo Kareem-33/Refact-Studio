@@ -16,7 +16,7 @@ export const servicesArr = [
     description:
       "We design clean, modern interfaces focused on usability, clarity, and conversion. Every layout, interaction, and visual decision is made to support real user behavior and business goals — not short-lived trends.",
     illustration: "./images/illustrations/ui-ux.svg",
-    slug: "web-design",
+    slug: "",
   },
   {
     icon: TerminalSquareIcon,
@@ -24,7 +24,7 @@ export const servicesArr = [
     description:
       "We build fast, secure, and scalable websites using modern technologies and best practices. From frontend interfaces to backend systems, our code is structured, efficient, and production-ready.",
     illustration: "./images/illustrations/development.svg",
-    slug: "web-development",
+    slug: "",
   },
   {
     icon: RefreshCcwIcon,
@@ -32,7 +32,7 @@ export const servicesArr = [
     description:
       "Already have a website? We improve what exists. We refactor messy code, fix performance issues, modernize the UI, and upgrade systems without unnecessary rebuilds or downtime.",
     illustration: "./images/illustrations/refactoring.svg",
-    slug: "refactoring",
+    slug: "",
   },
   {
     icon: GaugeIcon,
@@ -40,13 +40,13 @@ export const servicesArr = [
     description:
       "We optimize websites for search engines by improving performance, structure, and accessibility. From Core Web Vitals to semantic HTML and clean URLs, we make sure your website is fast, and built to rank.",
     illustration: "./images/illustrations/seo.svg",
-    slug: "seo-optimization",
+    slug: "",
   },
 ];
 
-const Services = () => {
+const Services = ({className=""}: {className?: string}) => {
   return (
-    <div className="p-[120px] flex flex-col items-start justify-center gap-[60px] bg-surface">
+    <div className={`p-[120px] flex flex-col items-start justify-center gap-[60px] bg-surface ${className}`}>
       <SectionHeader
         label="Our Services"
         title="Designing and building modern web systems"
