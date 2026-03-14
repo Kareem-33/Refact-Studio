@@ -28,7 +28,7 @@ const ContactUs = () => {
         title="Get in touch"
         subtitle="For general questions, clarifications, or anything that doesn’t require a full project brief."
       />
-      <div className="flex gap-[30px] p-[120px] justify-stretch">
+      <div className="flex md:flex-row flex-col gap-[30px] md:p-[120px] px-[30px] py-[100px] justify-stretch">
         <div className="flex-1 flex flex-col gap-[20px] p-[20px] bg-surface border border-border rounded-[15px]">
           <h3 className="text-xl font-semibold tracking-wide">Contact Info</h3>
           <hr className="border-border" />
@@ -87,10 +87,10 @@ const ContactUs = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-[20px] items-center">
-          <div className="bg-border w-[1px] h-full flex-1" />
+        <div className="flex md:flex-col gap-[20px] items-center">
+          <div className="bg-border md:w-[1px] w-full md:h-full h-[1px] flex-1" />
           <p className="text-soft-border">OR</p>
-          <div className="bg-border w-[1px] h-full flex-1" />
+          <div className="bg-border md:w-[1px] w-full md:h-full h-[1px] flex-1" />
         </div>
         <div className="flex-1 flex flex-col gap-[20px] p-[20px] bg-surface border border-border rounded-[15px]">
           <h3 className="text-xl font-semibold tracking-wide">Send Direct Message</h3>

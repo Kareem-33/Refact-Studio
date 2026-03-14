@@ -42,7 +42,7 @@ const Faq = () => {
   ];
 
   return (
-    <div className="p-[120px] flex flex-col items-start justify-center gap-[60px] bg-surface">
+    <div className="md:p-[120px] px-[30px] py-[100px] flex flex-col items-start justify-center gap-[60px] bg-surface">
       <SectionHeader
         label="FAQ"
         title="Frequently asked questions"

@@ -43,13 +43,13 @@ const OurPrinciples = () => {
   }, [activeTab]);
 
   return (
-    <div className="space-y-[40px] p-[120px]">
+    <div className="space-y-[40px] md:p-[120px] px-[30px] py-[100px]">
       <SectionHeader
         label="Our Principles"
         title="How we think and work"
         dir="left"
       />
-      <div className="flex flex-wrap w-fill gap-[25px]">
+      <div className="flex md:flex-row flex-col md:flex-wrap w-fill gap-[25px]">
         <div className="flex flex-col flex-wrap flex-1 gap-[25px]">
           {tabs.map((tab, index) => (
             <div

@@ -4,12 +4,12 @@ import React from "react";
 const Seo = () => {
   return (
     <div className="flex flex-col gap-[40px]">
-      <div className="flex gap-[20px] items-center">
+      <div className="flex md:flex-row flex-col gap-[20px] md:items-center">
         <div className="w-[70px] h-[70px] bg-elevated border border-border flex items-center justify-center rounded-[5px]">
           <GaugeIcon size={36} className="stroke-primary" />
         </div>
         <div className="space-y-[5px]">
-          <h3 className="text-2xl font-semibold">
+          <h3 className="md:text-2xl text-xl font-semibold">
             Technical SEO & Performance Optimization
           </h3>
           <p className="text-text-muted">
@@ -37,29 +37,29 @@ const Seo = () => {
           <StarIcon size={24} className="stroke-accent" />
           What We Do
         </h4>
-        <div className="grid grid-cols-3 grid-rows-2 mt-[20px] gap-[10px]">
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <ChevronsUpIcon size={24} className="stroke-text-disabled" />
+        <div className="md:grid-cols-3 grid-cols-1 md:grid-rows-2 grid mt-[20px] gap-[10px]">
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <ChevronsUpIcon size={24} className="stroke-text-disabled min-w-fit" />
             Performance optimization
           </p>
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <CpuIcon size={24} className="stroke-text-disabled" />
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <CpuIcon size={24} className="stroke-text-disabled min-w-fit" />
             Core Web Vitals improvements
           </p>
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <SearchCheckIcon size={24} className="stroke-text-disabled" />
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <SearchCheckIcon size={24} className="stroke-text-disabled min-w-fit" />
             Technical SEO audits
           </p>
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <FileCodeIcon size={24} className="stroke-text-disabled" />
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <FileCodeIcon size={24} className="stroke-text-disabled min-w-fit" />
             Semantic HTML improvements
           </p>
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <AccessibilityIcon size={24} className="stroke-text-disabled" />
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <AccessibilityIcon size={24} className="stroke-text-disabled min-w-fit" />
             Accessibility enhancements
           </p>
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <LayoutPanelLeftIcon size={24} className="stroke-text-disabled" />
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <LayoutPanelLeftIcon size={24} className="stroke-text-disabled min-w-fit" />
             Page structure optimization
           </p>
         </div>

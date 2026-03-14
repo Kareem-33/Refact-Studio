@@ -36,7 +36,7 @@ const OurWork = () => {
   ];
 
   return (
-    <div className="p-[120px] flex flex-col items-start justify-center gap-[60px]">
+    <div className="md:p-[120px] px-[30px] py-[100px] flex flex-col items-start justify-center gap-[60px]">
       <SectionHeader
         label="OUR WORK"
         title="Selected projects we’ve designed and built"
@@ -44,7 +44,7 @@ const OurWork = () => {
       />
       <div className="space-y-[35px]">
         <motion.div
-          className="grid grid-cols-2 grid-rows-[auto_1fr] gap-[35px] min-h-[250px] max-h-fit w-full "
+          className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-[auto_1fr] gap-[35px] min-h-[250px] max-h-fit w-full "
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}

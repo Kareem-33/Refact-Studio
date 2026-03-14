@@ -3,8 +3,8 @@ import Label from "../ui/Label";
 
 const WhatWeDo = () => {
   return (
-    <div className="flex w-full p-[120px] pb-[60px] gap-[80px] justify-between items-center bg-surface">
-      <div className="h-[400px] aspect-square">
+    <div className="flex w-full md:p-[120px] md:pb-[60px] px-[30px] pt-[100px] pb-[50px] gap-[80px] justify-between items-center bg-surface">
+      <div className="h-[400px] aspect-square hidden md:block">
         <img
           src="../images/projects/snail-store.png"
           alt=""

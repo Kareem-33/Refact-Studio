@@ -11,7 +11,7 @@ type Props = {
 
 const TestimonialCard = (props: Props) => {
   return (
-    <div className='bg-surface border border-border rounded-[10px] w-[500px] h-fit flex flex-col'>
+    <div className='bg-surface border border-border rounded-[10px] md:w-[500px] h-fit flex flex-col'>
       <div className='flex items-start justify-between h-fit p-[20px] pb-0'>
         <FaQuoteLeft className='fill-primary/50 w-[30px] h-[30px]' />
         <Pill>{props.rate}/10 Overall</Pill>

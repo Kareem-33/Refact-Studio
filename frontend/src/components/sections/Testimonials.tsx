@@ -92,8 +92,8 @@ const Testimonials = () => {
       ref={containerRef}
       className="py-[120px] flex flex-col items-center justify-center gap-[60px] relative"
     >
-      <div className="pointer-events-none absolute w-[300px] h-full bg-linear-to-r from-background to-transparent to-100% z-10 top-0 left-0" />
-      <div className="pointer-events-none absolute w-[300px] h-full bg-linear-to-r to-background from-transparent to-100% z-10 top-0 right-0" />
+      <div className="pointer-events-none absolute md:w-[300px] w-[75px] h-full bg-linear-to-r to-background from-transparent to-100% z-10 top-0 right-0" />
+      <div className="pointer-events-none absolute md:w-[300px] w-[75px] h-full bg-linear-to-r from-background to-transparent to-100% z-10 top-0 left-0" />
       <SectionHeader
         label="TESTIMONIALS"
         title="What our clients say about working with us"
@@ -101,7 +101,7 @@ const Testimonials = () => {
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         spaceBetween={30}
-        slidesPerView={3}
+        slidesPerView={window.innerWidth > 1024 ? 3 : 1}
         centeredSlides={true}
         modules={[Navigation]}
         navigation={{
@@ -115,7 +115,7 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <SwiperSlide
             key={index}
-            className="w-[500px] cursor-grab active:cursor-grabbing"
+            className="md:w-[500px] cursor-grab active:cursor-grabbing px-[20px] md:p-0"
           >
             <TestimonialCard {...testimonial} />
           </SwiperSlide>

@@ -129,9 +129,10 @@ const Faq = () => {
         title="Answers to common questions"
         subtitle="Everything you need to know before starting a project with Refact Studio."
       />
-      <div className="p-[120px] flex gap-[60px]">
+      <div className="md:p-[120px] px-[30px] py-[100px] flex md:flex-row flex-col gap-[60px]">
         <div className="flex flex-col gap-[100px] w-[250px]">
           <ul className="space-y-[20px]">
+            <h3 className="font-semibold text-2xl pb-[20px]">Categories</h3>
             {sections.map((section, index) => (
               <li
                 key={index}
@@ -142,7 +143,7 @@ const Faq = () => {
               </li>
             ))}
           </ul>
-          <div className="space-y-[10px]">
+          <div className="space-y-[10px] hidden md:block">
             <p className="text-sm tracking-wide leading-[150%] text-text-muted">
               Didn’t find your question?
               <br />
@@ -184,6 +185,17 @@ const Faq = () => {
                 </p>
               </Accordion>
             ))}
+          </div>
+          <div className="space-y-[10px] md:hidden mt-[50px]">
+            <p className="text-sm tracking-wide leading-[150%] text-text-muted">
+              Didn’t find your question?
+              <br />
+              Reach out and tell us about your project — we’ll be happy to help.
+            </p>
+            <Button variant="small-ghost">
+              Contact Us
+              <ArrowRightIcon size={16} />
+            </Button>
           </div>
         </div>
       </div>

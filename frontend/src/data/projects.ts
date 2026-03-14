@@ -7,7 +7,7 @@ export const projects = [
     category: "health",
     images: [
       "/images/projects/snail-store.png",
-      "/images/projects/snail-store.png",
+      "/images/projects/reayaa.png",
       "/images/projects/snail-store.png",
     ],
     tags: [
@@ -19,6 +19,7 @@ export const projects = [
     ],
     deliverables: ["Figma Prototype", "Source Code", "Documentation"],
     techStack: ["TypeScript", "React", "Express.js", "MongoDB", "Node.js"],
+    slug: "reaaya-medical-platform",
   },
   {
     id: 2,

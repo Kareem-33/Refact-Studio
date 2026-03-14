@@ -9,15 +9,15 @@ type Props = {
 
 const PageHeader = (props: Props) => {
   return (
-    <div className="h-[calc(100vh-150px)] w-full flex flex-col items-center justify-between py-[80px] px-[120px] border-b border-border">
+    <div className="h-[calc(100vh-150px)] w-full flex flex-col items-center justify-between py-[80px] md:px-[120px] px-[30px] border-b border-border">
       <motion.div
-        className="flex flex-col items-center text-center w-[480px] gap-[20px]"
+        className="flex flex-col items-center text-center md:w-[480px] gap-[20px]"
         initial={{ filter: "blur(10px)", transform: "translateY(20px)", opacity: 0 }}
         animate={{ filter: "blur(0)", transform: "translateY(0)", opacity: 1 }}
         transition={{ duration: 0.7, ease: "easeInOut" }}
       >
         <Label>{props.label}</Label>
-        <h2 className="text-[32px] font-medium leading-[120%] tracking-normal">
+        <h2 className="md:text-[32px] text-[28px] font-medium leading-[130%] tracking-normal">
           {props.title}
         </h2>
         <p className="font-normal text-base text-text-muted leading-[150%] tracking-wide">

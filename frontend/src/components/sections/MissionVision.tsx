@@ -3,7 +3,7 @@ import React from "react";
 
 const MissionVision = () => {
   return (
-    <div className="flex gap-[60px] p-[120px] pt-[60px] w-full">
+    <div className="flex md:flex-row flex-col gap-[60px] md:p-[120px] md:pt-[60px] px-[30px] pt-[50px] pb-[100px] w-full">
       <div className="flex flex-col gap-[20px] flex-1">
         <div className="flex gap-[10px] px-[20px] py-[10px] rounded-full bg-elevated border border-border items-center w-fit">
           <GoalIcon size={18} className="stroke-primary" />
@@ -17,7 +17,7 @@ const MissionVision = () => {
           short-term trends.
         </p>
       </div>
-      <div className="w-[1px] bg-border" />
+      <div className="md:w-[1px] md:h-full w-full h-[1px] bg-border" />
       <div className="flex flex-col gap-[20px] flex-1">
         <div className="flex gap-[10px] px-[20px] py-[10px] rounded-full bg-elevated border border-border items-center w-fit">
           <EyeIcon size={18} className="stroke-primary" />

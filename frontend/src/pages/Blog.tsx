@@ -21,7 +21,7 @@ const articleCategories = [
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const articlesPerPage = 9;
+  const articlesPerPage = window.innerWidth < 1024 ? 4 : 9;
 
   const page = searchParams.get("page") ?? "1";
   const category = searchParams.get("category") ?? "all";
@@ -100,10 +100,10 @@ const Blog = () => {
       />
 
       <div
-        className="flex flex-col gap-[40px] p-[120px] pt-[40px] w-full h-fit"
+        className="flex flex-col gap-[40px] md:p-[120px] md:pt-[40px] px-[30px] pb[100px] pt-[50px] w-full h-fit"
         id="section"
       >
-        <div className="flex items-center justify-between pb-[40px] gap-[40px]">
+        <div className="flex md:flex-row flex-col-reverse items-center justify-between pb-[40px] gap-[40px]">
           <div className="flex flex-wrap gap-[10px] flex-1">
             {articleCategories.map((articleCategory) => (
               <TabPill
@@ -129,7 +129,7 @@ const Blog = () => {
           {Math.min(+page * articlesPerPage, filtered.length)} of{" "}
           {filtered.length} articles
         </p>
-        <div className="grid grid-cols-3 gap-[25px]">
+        <div className="grid md:grid-cols-3 gap-[25px]">
           {paginatedArticles.map((article) => (
             <BlogCard key={article.id} {...article} />
           ))}

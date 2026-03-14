@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="px-[120px] py-[80px] flex justify-between items-start overflow-x-hidden">
+    <div className="px-[30px] md:px-[120px] py-[40px] md:py-[80px] flex justify-between items-start overflow-x-hidden">
       <motion.div
         className="space-y-[40px] w-[580px]"
         initial={{ opacity: 0, x: "-100%" }}
@@ -14,25 +14,25 @@ const Hero = () => {
         <div className="space-y-[24px]">
           <div className="space-y-[16px]">
             <Label>DIGITAL DESIGN & DEVELOPMENT STUDIO</Label>
-            <h1 className="text-[56px] font-medium leading-[120%] bg-linear-180 from-text-primary to-text-muted bg-clip-text text-transparent">
+            <h1 className="text-[42px] md:text-[56px] font-medium leading-[120%] bg-linear-180 from-text-primary to-text-muted bg-clip-text text-transparent">
               We Build, Upgrade, and{" "}
               <span className="text-primary-soft">Refactor</span> Digital
               Experiences
             </h1>
           </div>
-          <p className="text-lg leading-[150%] font-normal text-text-secondary tracking-[0.08em]!">
+          <p className="md:text-lg leading-[150%] font-normal text-text-secondary tracking-wide">
             Refact Studio is a web design and programming agency focused on
             building fast, scalable, and maintainable websites for modern
             businesses.
           </p>
         </div>
-        <div className="flex items-center gap-[24px]">
+        <div className="flex items-center gap-[10px] md:gap-[24px]">
           <Button variant="primary">Start a Project</Button>
           <Button variant="secondary">View Our Work</Button>
         </div>
       </motion.div>
       <motion.div
-        className="w-[480px]"
+        className="w-[480px] md:block hidden"
         initial={{ opacity: 0, x: "100%" }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeInOut" }}

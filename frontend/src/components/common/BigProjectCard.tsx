@@ -7,6 +7,7 @@ import {
   ArrowRightIcon,
 } from "lucide-react";
 import Button from "../ui/Button";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   id: number;
@@ -18,16 +19,19 @@ type Props = {
   deliverables: string[];
   techStack: string[];
   reverse?: boolean;
+  slug?: string;
 };
 
 const BigProjectCard = (props: Props) => {
+  const navigate = useNavigate();
+
   return (
-    <div className={`min-h-[540px] w-full flex gap-[20px] p-[20px] rounded-[20px] bg-surface border border-border ${props.reverse ? "flex-row-reverse" : ""}`}>
-      <div className="min-h-[500px] w-[500px] rounded-[10px] overflow-hidden relative border border-border">
-        <div className="h-full w-full absolute top-0 left-0 bg-linear-180 from-transparent from-80% to-surface z-1 pointer-events-none" />
+    <div className={`min-h-[540px] w-full flex flex-col md:flex-row gap-[20px] md:p-[20px] md:rounded-[20px] rounded-[10px] overflow-hidden bg-surface border border-border ${props.reverse ? "md:flex-row-reverse" : ""}`}>
+      <div className="md:min-h-[500px] md:w-[500px] md:rounded-[10px] overflow-hidden relative md:border border-border">
+        {/* <div className="h-full w-full absolute top-0 left-0 bg-linear-to-b from-transparent from-80% to-surface z-1 pointer-events-none" /> */}
         <Swiper
           modules={[Pagination]}
-          className="h-full w-full cursor-grab active:cursor-grabbing"
+          className="h-full w-full cursor-grab active:cursor-grabbing z-10"
           pagination={{ clickable: true }}
           spaceBetween={0}
           slidesPerView={1}
@@ -41,7 +45,7 @@ const BigProjectCard = (props: Props) => {
           ))}
         </Swiper>
       </div>
-      <div className="flex-1 flex flex-col py-[20px] gap-[10px]">
+      <div className="flex-1 flex flex-col py-[15px] px-[15px] md:py-[20px] md:px-0 gap-[10px]">
         <h3 className="text-lg font-semibold leading-[120%]">{props.title}</h3>
         <p className="text-sm font-normal tracking-wide leading-[150%] text-text-muted">
           {props.description}
@@ -82,6 +86,7 @@ const BigProjectCard = (props: Props) => {
         <Button
           variant="small-ghost"
           className="bg-background! hover:bg-surface! mt-[10px]"
+          onClick={() => props.slug && navigate(`/projects/${props.slug}`)}
         >
           View Project <ArrowRightIcon size={20} />
         </Button>

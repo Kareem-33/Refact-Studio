@@ -46,19 +46,19 @@ export const servicesArr = [
 
 const Services = ({className=""}: {className?: string}) => {
   return (
-    <div className={`p-[120px] flex flex-col items-start justify-center gap-[60px] bg-surface ${className}`}>
+    <div className={`px-[30px] py-[100px] md:p-[120px] flex flex-col items-start justify-center gap-[60px] bg-surface ${className}`}>
       <SectionHeader
         label="Our Services"
         title="Designing and building modern web systems"
         dir="left"
-        classname="w-[480px]"
+        classname="md:w-[480px]"
       />
-      <div className="grid grid-cols-2 grid-rows-2 w-full h-[850px] gap-[40px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 w-full h-[1700px] md:h-[850px] gap-[40px]">
         {servicesArr.map((service, index) => (
           <motion.div
             key={index}
             className="flex flex-col items-center justify-between bg-background rounded-[10px]
-            p-[40px] pb-0 w-full h-full border-[0.5px] border-border"
+            p-[20px] md:p-[40px] pb-0 w-full h-full border-[0.5px] border-border"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -72,7 +72,7 @@ const Services = ({className=""}: {className?: string}) => {
                     strokeWidth={1.5}
                   />
                 </div>
-                <h3 className="text-xl font-semibold">{service.title}</h3>
+                <h3 className="md:text-xl text-lg font-semibold">{service.title}</h3>
               </div>
               <p className="text-sm leading-[150%] text-text-muted tracking-wide">
                 {service.description}

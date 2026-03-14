@@ -14,12 +14,12 @@ import React from "react";
 const Refactoring = () => {
   return (
     <div className="flex flex-col gap-[40px]">
-      <div className="flex gap-[20px] items-center">
+      <div className="flex md:flex-row flex-col gap-[20px] md:items-center">
         <div className="w-[70px] h-[70px] bg-elevated border border-border flex items-center justify-center rounded-[5px]">
           <RefreshCcwIcon size={36} className="stroke-primary" />
         </div>
         <div className="space-y-[5px]">
-          <h3 className="text-2xl font-semibold">
+          <h3 className="md:text-2xl text-xl font-semibold">
             Website Refactoring & Upgrades
           </h3>
           <p className="text-text-muted">
@@ -47,29 +47,29 @@ const Refactoring = () => {
           <StarIcon size={24} className="stroke-accent" />
           What We Do
         </h4>
-        <div className="grid grid-cols-3 grid-rows-2 mt-[20px] gap-[10px]">
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <CodeXmlIcon size={24} className="stroke-text-disabled" />
+        <div className="grid md:grid-cols-3 grid-cols-1 md:grid-rows-2 mt-[20px] gap-[10px]">
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <CodeXmlIcon size={24} className="stroke-text-disabled min-w-fit" />
             Codebase restructuring and cleanup
           </p>
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <GaugeIcon size={24} className="stroke-text-disabled" />
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <GaugeIcon size={24} className="stroke-text-disabled min-w-fit" />
             Performance improvements
           </p>
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <Columns3CogIcon size={24} className="stroke-text-disabled" />
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <Columns3CogIcon size={24} className="stroke-text-disabled min-w-fit" />
             UI and UX upgrades
           </p>
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <CpuIcon size={24} className="stroke-text-disabled" />
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <CpuIcon size={24} className="stroke-text-disabled min-w-fit" />
             Technology updates
           </p>
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <BugOffIcon size={24} className="stroke-text-disabled" />
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <BugOffIcon size={24} className="stroke-text-disabled min-w-fit" />
             Bug fixes and stability improvements
           </p>
-          <p className="bg-surface p-[20px] rounded-[7px] border border-border text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center justify-center gap-[15px]">
-            <SparklesIcon size={24} className="stroke-text-disabled" />
+          <p className="bg-surface p-[20px] rounded-[7px] border border-border md:text-center transition-all duration-300 ease-in-out hover:bg-primary/10 cursor-default flex items-center md:justify-center gap-[15px]">
+            <SparklesIcon size={24} className="stroke-text-disabled min-w-fit" />
             System modernization
           </p>
         </div>

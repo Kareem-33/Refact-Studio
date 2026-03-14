@@ -5,12 +5,12 @@ import { socials } from "../data/socialMedia";
 const Footer = () => {
 
   return (
-    <div className="flex flex-col h-[410px] w-full bg-surface border-t border-border">
-      <div className="flex items-start justify-between py-[60px] px-[120px] h-full">
+    <div className="flex flex-col md:h-[410px] w-full bg-surface border-t border-border">
+      <div className="flex flex-col md:flex-row items-start justify-between p-[30px] md:py-[60px] md:px-[120px] h-full md:gap-0 gap-[40px]">
         {/* Logo */}
-        <div className="flex flex-col items-start gap-[20px] w-[320px]">
-          <img src="/images/logo.svg" alt="logo" className="h-[80px]" />
-          <p className="text-sm font-normal tracking-wide text-text-muted">
+        <div className="flex flex-col items-start gap-[20px] md:w-[320px] w-full border-b border-soft-border pb-[20px] md:border-0 md:pb-0">
+          <img src="/images/logo.svg" alt="logo" className="md:h-[80px] h-[60px] mx-auto md:mx-0" />
+          <p className="text-sm font-normal tracking-wide text-text-muted text-center md:text-left">
             Designing, building, and refactoring modern web systems.
           </p>
         </div>

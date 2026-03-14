@@ -3,7 +3,7 @@ import Label from "../ui/Label";
 
 const OurStory = () => {
   return (
-    <div className="flex w-full p-[120px] pb-[60px] gap-[80px] justify-between items-center">
+    <div className="flex w-full md:p-[120px] md:pb-[60px] p-[30px] py-[50px] gap-[80px] justify-between items-center">
       <div className="flex flex-col gap-[30px] flex-1">
         <Label>Our Story</Label>
         <p className="font-light tracking-wide leading-[170%]">
@@ -27,7 +27,7 @@ const OurStory = () => {
           clean code, and responsible engineering.
         </p>
       </div>
-      <div className="h-[400px] aspect-square">
+      <div className="h-[400px] aspect-square hidden md:block">
         <img src="../images/projects/snail-store.png" alt="" className="w-full h-full object-cover"/>
       </div>
     </div>

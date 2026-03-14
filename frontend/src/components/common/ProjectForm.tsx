@@ -38,7 +38,7 @@ const ProjectForm = ({ className = "" }: { className?: string }) => {
         This form helps us understand your goals, scope, and technical context
         so we can respond clearly and efficiently.
       </p>
-      <fieldset className="flex gap-[30px] w-full">
+      <fieldset className="flex md:flex-row flex-col gap-[30px] w-full">
         <Input
           label="Full Name"
           placeholder="John Doe"
@@ -92,7 +92,7 @@ const ProjectForm = ({ className = "" }: { className?: string }) => {
         required={false}
         register={register("notes")}
       />
-      <div className="flex items-center justify-between gap-[50px]">
+      <div className="flex md:flex-row flex-col md:items-center justify-between md:gap-[50px] gap-[20px]">
         <div className="flex-1 text-text-disabled text-sm tracking-wide leading-[150%]">
           We usually reply within 1–2 business days with questions or next
           steps.

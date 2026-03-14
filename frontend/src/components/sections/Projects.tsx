@@ -83,10 +83,10 @@ const Projects = () => {
 
   return (
     <div
-      className="flex flex-col gap-[40px] p-[120px] pt-[40px] w-full h-fit"
+      className="flex flex-col gap-[40px] md:p-[120px] px-[30px] pt-[40px] pb-[100px] w-full h-fit"
       id="section"
     >
-      <div className="flex items-center justify-between pb-[40px] gap-[40px]">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between pb-[40px] gap-[40px]">
         <div className="flex flex-wrap gap-[10px] flex-1">
           {projectCategories.map((projectCategory) => (
             <TabPill

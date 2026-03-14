@@ -11,11 +11,11 @@ const StartProject = () => {
         title="Tell us about your project"
         subtitle="Share your idea or existing system details, and we’ll help you define the best next steps."
       />
-      <div className='p-[120px] space-y-[30px] w-full h-fit'>
+      <div className='md:p-[120px] px-[30px] py-[100px] space-y-[30px] w-full h-fit'>
         <h2 className='text-3xl font-medium'>Project information</h2>
         <div className='flex gap-[80px] items-stretch'>
           <ProjectForm className="flex-1" />
-          <div className='flex-1'>
+          <div className='flex-1 hidden md:block'>
             <img src="/images/projects/snail-store.png" alt="" className='w-full h-full object-cover rounded-[10px]' />
           </div>
         </div>

@@ -36,7 +36,7 @@ const Services = () => {
         subtitle="From design to development and refactoring, we help teams build reliable digital products that are clear, fast, and maintainable."
       />
 
-      <div className="p-[120px] pt-[60px]">
+      <div className="md:p-[120px] px-[30px] pt-[50px] pb-[100px] md:pt-[60px]">
         <div className="overflow-hidden relative flex w-full items-center bg-surface rounded-t-[10px] border border-border divide-border divide-x">
           {/* Active Tab Background */}
           <div
@@ -55,12 +55,12 @@ const Services = () => {
               onClick={() => setActiveTab(index)}
             >
               <item.icon size={24} className="stroke-primary"/>
-              <h2>{item.title}</h2>
+              <h2 className="hidden md:block">{item.title}</h2>
             </div>
           ))}
         </div>
 
-        <div className="p-[40px] pt-[80px] h-fit bg-linear-to-b from-0% to-[60px] from-background to-surface border border-border rounded-b-[10px] transition-all duration-300 ease-in-out">
+        <div className="md:p-[40px] p-[20px] pt-[80px] h-fit bg-linear-to-b from-0% to-[60px] from-background to-surface border border-border rounded-b-[10px] transition-all duration-300 ease-in-out">
           {activeTab === 0 && <WebDesign />}
           {activeTab === 1 && <WebDevelopment />}
           {activeTab === 2 && <Refactoring />}
