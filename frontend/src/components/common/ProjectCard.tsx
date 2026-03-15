@@ -1,6 +1,7 @@
 import { ArrowRightIcon, StarIcon } from "lucide-react";
 import Pill from "../ui/Pill";
 import Button from "../ui/Button";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   img: string;
@@ -8,10 +9,13 @@ type Props = {
   description: string;
   featured?: boolean;
   tags: string[];
-  link: string;
+  slug?: string;
 };
 
 const ProjectCard = (props: Props) => {
+
+  const navigate = useNavigate();
+
   return (
     <div
       className={`flex flex-col items-start justify-start ${props.featured ? "col-span-2 md:flex-row" : "md:flex-col-reverse"}
@@ -41,6 +45,7 @@ const ProjectCard = (props: Props) => {
         <Button
           variant="small-ghost"
           className="mt-[10px] bg-background! hover:bg-elevated!"
+          onClick={() => props.slug && navigate(`/projects/${props.slug}`)}
         >
           Show Project
           <ArrowRightIcon size={16} />

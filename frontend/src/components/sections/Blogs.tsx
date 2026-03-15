@@ -3,40 +3,12 @@ import BlogCard from "../common/BlogCard";
 import Button from "../ui/Button";
 import { ArrowRightIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { articles } from "../../data/articles";
 
 const Blogs = () => {
-  const blogs = [
-    {
-      img: "/images/projects/reayaa.png",
-      category: "Web Development",
-      title: "When Should You Rebuild vs. Redesign Your Mobile App?",
-      description:
-        "Discover whether your business should redesign its existing mobile app or rebuild it from scratch to deliver a better customer Discover whether your Discover whether your",
-      author: "Kareem Refaat",
-      date: "Nov 12, 2025",
-      slug: "reayaa-website",
-    },
-    {
-      img: "/images/projects/reayaa.png",
-      category: "Web Development",
-      title: "When Should You Rebuild vs. Redesign Your Mobile App?",
-      description:
-        "Discover whether your business should redesign its existing mobile app or rebuild it from scratch to deliver a better customer Discover whether your Discover whether your",
-      author: "Kareem Refaat",
-      date: "Nov 12, 2025",
-      slug: "reayaa-website",
-    },
-    {
-      img: "/images/projects/reayaa.png",
-      category: "Web Development",
-      title: "When Should You Rebuild vs. Redesign Your Mobile App?",
-      description:
-        "Discover whether your business should redesign its existing mobile app or rebuild it from scratch to deliver a better customer Discover whether your Discover whether your",
-      author: "Kareem Refaat",
-      date: "Nov 12, 2025",
-      slug: "reayaa-website",
-    },
-  ];
+
+  const navigate = useNavigate();
 
   return (
     <div className="md:p-[120px] px-[30px] py-[100px] flex flex-col items-center justify-center gap-[60px] relative overflow-hidden">
@@ -52,11 +24,11 @@ const Blogs = () => {
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
       >
-        {blogs.map((blog, index) => (
+        {articles.sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3).map((blog, index) => (
           <BlogCard key={index} {...blog} />
         ))}
       </motion.div>
-      <Button variant="secondary" className="-mt-[30px]">
+      <Button variant="secondary" className="-mt-[30px]" onClick={() => navigate("/blog")}>
         <p>Explore more articles</p>
         <ArrowRightIcon size={18} />
       </Button>

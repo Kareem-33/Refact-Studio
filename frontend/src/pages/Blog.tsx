@@ -9,14 +9,9 @@ import BlogCard from "../components/common/BlogCard";
 import { scroller } from "react-scroll";
 import ContactBanner from "../components/sections/ContactBanner";
 
-const articleCategories = [
-  "all",
-  "performance",
-  "refactoring",
-  "ui / ux",
-  "technical seo",
-  "development",
-];
+const articleCategories = ["All", ...articles
+  .map((article) => article.category)
+  .filter((category, index, arr) => arr.indexOf(category) === index)];
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -24,25 +19,15 @@ const Blog = () => {
   const articlesPerPage = window.innerWidth < 1024 ? 4 : 9;
 
   const page = searchParams.get("page") ?? "1";
-  const category = searchParams.get("category") ?? "all";
+  const category = searchParams.get("category") ?? "All";
   const search = searchParams.get("search") ?? "";
-
-  useEffect(() => {
-    if (!searchParams.toString()) {
-      setSearchParams({
-        page: "1",
-        category: "all",
-        search: "",
-      });
-    }
-  }, [searchParams, setSearchParams]);
 
   const filtered = useMemo(() => {
     const query = search.trim().toLowerCase();
 
-    return articles.filter((article) => {
+    return articles.sort((a, b) => b.date.localeCompare(a.date)).filter((article) => {
       const matchesCategory =
-        category === "all" || article.category === category;
+        category === "All" || article.category === category;
 
       const matchesSearch =
         query === "" ||
@@ -111,8 +96,7 @@ const Blog = () => {
                 active={category === articleCategory}
                 onClick={() => handleCategoryChange(articleCategory)}
               >
-                {articleCategory.charAt(0).toUpperCase() +
-                  articleCategory.slice(1).toLowerCase()}
+                {articleCategory}
               </TabPill>
             ))}
           </div>

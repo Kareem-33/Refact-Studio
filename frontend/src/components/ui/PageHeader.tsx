@@ -5,14 +5,19 @@ type Props = {
   label: string;
   title: string;
   subtitle: string;
+  className?: string;
 };
 
 const PageHeader = (props: Props) => {
   return (
     <div className="h-[calc(100vh-150px)] w-full flex flex-col items-center justify-between py-[80px] md:px-[120px] px-[30px] border-b border-border">
       <motion.div
-        className="flex flex-col items-center text-center md:w-[480px] gap-[20px]"
-        initial={{ filter: "blur(10px)", transform: "translateY(20px)", opacity: 0 }}
+        className={`flex flex-col items-center text-center md:w-[480px] gap-[20px] ${props.className || ""}`}
+        initial={{
+          filter: "blur(10px)",
+          transform: "translateY(20px)",
+          opacity: 0,
+        }}
         animate={{ filter: "blur(0)", transform: "translateY(0)", opacity: 1 }}
         transition={{ duration: 0.7, ease: "easeInOut" }}
       >

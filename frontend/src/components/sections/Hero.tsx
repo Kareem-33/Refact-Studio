@@ -1,8 +1,11 @@
 import Label from "../ui/Label";
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="px-[30px] md:px-[120px] py-[40px] md:py-[80px] flex justify-between items-start overflow-x-hidden">
       <motion.div
@@ -27,8 +30,8 @@ const Hero = () => {
           </p>
         </div>
         <div className="flex items-center gap-[10px] md:gap-[24px]">
-          <Button variant="primary">Start a Project</Button>
-          <Button variant="secondary">View Our Work</Button>
+          <Button variant="primary" onClick={() => navigate("/start-project")}>Start a Project</Button>
+          <Button variant="secondary" onClick={() => navigate("/work")}>View Our Work</Button>
         </div>
       </motion.div>
       <motion.div

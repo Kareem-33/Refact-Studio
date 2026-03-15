@@ -86,7 +86,7 @@ const Footer = () => {
             </h4>
             <div className="flex items-center gap-[10px]">
               <PhoneIcon size={16} strokeWidth={1.5} />
-              <p>+20 155 7337 236</p>
+              <p>+20 101 7225 728</p>
             </div>
             <div className="flex items-center gap-[10px]">
               <MailIcon size={16} strokeWidth={1.5} />

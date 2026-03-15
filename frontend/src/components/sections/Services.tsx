@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export const servicesArr = [
   {
@@ -45,6 +46,8 @@ export const servicesArr = [
 ];
 
 const Services = ({className=""}: {className?: string}) => {
+  const navigate = useNavigate();
+  
   return (
     <div className={`px-[30px] py-[100px] md:p-[120px] flex flex-col items-start justify-center gap-[60px] bg-surface ${className}`}>
       <SectionHeader
@@ -77,7 +80,7 @@ const Services = ({className=""}: {className?: string}) => {
               <p className="text-sm leading-[150%] text-text-muted tracking-wide">
                 {service.description}
               </p>
-              <Button variant="small-ghost">
+              <Button variant="small-ghost" onClick={() => navigate("/services")}>
                 Learn More
                 <ArrowRightIcon size={16} strokeWidth={2} />
               </Button>

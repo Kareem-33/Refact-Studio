@@ -42,7 +42,7 @@ const BlogCard = (props: Props) => {
       <div className="flex justify-between p-[20px] border-t border-border bg-elevated">
         <div className="flex flex-col gap-[5px]">
           <p className="font-normal text-text-muted tracking-wide text-sm">{props.author}</p>
-          <div className="flex items-center gap-[10px] text-xs text-text-muted font-normal">
+          <div className="flex items-center gap-[7px] text-sm text-text-muted font-normal">
             <CalendarIcon size={16} strokeWidth={1.5} />
             <p>{props.date}</p>
           </div>

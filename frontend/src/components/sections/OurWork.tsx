@@ -3,8 +3,12 @@ import ProjectCard from "../common/ProjectCard";
 import Button from "../ui/Button";
 import { ArrowRightIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const OurWork = () => {
+
+  const navigate = useNavigate();
+
   const projects = [
     {
       img: "/images/projects/snail-store.png",
@@ -13,7 +17,7 @@ const OurWork = () => {
         "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       featured: true,
       tags: ["Dashboard", "Design", "Development"],
-      link: "#",
+      slug: "#",
     },
     {
       img: "/images/projects/snail-store.png",
@@ -22,7 +26,7 @@ const OurWork = () => {
         "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       featured: false,
       tags: ["Dashboard", "Design", "Development"],
-      link: "#",
+      slug: "#",
     },
     {
       img: "/images/projects/reayaa.png",
@@ -31,7 +35,7 @@ const OurWork = () => {
         "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       featured: false,
       tags: ["Dashboard", "Design", "Development"],
-      link: "#",
+      slug: "#",
     },
   ];
 
@@ -54,7 +58,7 @@ const OurWork = () => {
             <ProjectCard key={index} {...project} />
           ))}
         </motion.div>
-        <Button variant="small-ghost" className="text-base!">
+        <Button variant="small-ghost" className="text-base!" onClick={() => navigate("/work")}>
           Show All Work
           <ArrowRightIcon size={20} />
         </Button>

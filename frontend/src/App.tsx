@@ -16,6 +16,7 @@ import WebDevelopment from "./pages/services/WebDevelopment";
 import Refactoring from "./pages/services/Refactoring";
 import Seo from "./pages/services/Seo";
 import Services from "./pages/Services";
+import Article from "./pages/Article";
 
 const App = () => {
 
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="start-project" element={<StartProject />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="blog/:slug" element={<Article />} />
           <Route path="services" element={<Services />}>
             {/* <Route path="web-design" element={<WebDesign />} />
             <Route path="web-development" element={<WebDevelopment />} />

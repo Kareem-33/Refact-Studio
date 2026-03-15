@@ -4,9 +4,11 @@ import Accordion from "../ui/Accordion";
 import Button from "../ui/Button";
 import { ArrowRightIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const navigate = useNavigate();
 
   const faqs = [
     {
@@ -78,7 +80,7 @@ const Faq = () => {
           Didn’t find your question? <br />
           Reach out and tell us about your project — we’ll be happy to help.
         </p>
-        <Button variant="small-ghost" className="bg-background! hover:bg-surface!">
+        <Button variant="small-ghost" className="bg-background! hover:bg-surface!" onClick={() => navigate("contact-us")}>
           Contact Us
           <ArrowRightIcon size={16} />
         </Button>
